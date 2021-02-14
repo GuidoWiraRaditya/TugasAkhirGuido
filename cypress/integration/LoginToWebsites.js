@@ -1,4 +1,4 @@
-describe('Login to websites', () => {
+describe('Test Login Sites', () => {
 
     it('access login page', () => {
       cy.visit('/login');
@@ -6,14 +6,14 @@ describe('Login to websites', () => {
 
     it('Input username', () => {
       cy.xpath('//*[@id="login"]/div[1]/div/div[3]/div[1]/div[2]/input')
-        .type('150708428')
-        .should('have.value', '150708428');
+        .type(Cypress.env('username'))
+        .should('have.value', Cypress.env('username'));
     })
 
     it('Input password', () => {
       cy.xpath('//*[@id="login"]/div[1]/div/div[3]/div[2]/div[2]/input')
-        .type('150708428')
-        .should('have.value', '150708428');
+        .type(Cypress.env('password'))
+        .should('have.value', Cypress.env('password'));
     })
 
     it('Click login button', () => {
@@ -21,7 +21,7 @@ describe('Login to websites', () => {
         .click();
     })
 
-    it('Assertion', () => {
+    it('Assertion - Check path and metadata', () => {
       cy.location('pathname', {timeout: 10000}).should('eq', '/');
       
       cy.document()
