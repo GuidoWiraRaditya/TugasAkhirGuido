@@ -1,3 +1,7 @@
 {
     "baseUrl": "http://bimbingan.uajy.ac.id"
+    "env": {
+        "username": "150708428",
+        "password": "150708428"
+    }
 }
