@@ -33,7 +33,6 @@ describe('Test Login Sites', () => {
     cy.xpath('//*[@id="Sidebar"]/div/div[3]/div/div')
       .click();
   })
-  
 })
 
   

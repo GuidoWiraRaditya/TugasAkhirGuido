@@ -1,4 +1,4 @@
-describe('Test Create New Bimbingan Akademik', () =>{
+describe('Test Access Form Bimbingan Akademik', () =>{
 
   it('Arrangement - Login To Websites', () => {
     cy.visit('/login');
@@ -14,7 +14,7 @@ describe('Test Create New Bimbingan Akademik', () =>{
   it('Go to Bimbingan Akademik page', () => {
     cy.xpath('//*[@id="Sidebar"]/div/div[2]/div[2]/div')
       .click()
-      .location('pathname', {timeout: 1000}).should('eq','/mahasiswa/bimbingan/akademik');
+      .location('pathname', {timeout: 10000}).should('eq', '/mahasiswa/bimbingan/akademik');
   })
 
   it('Crate new Bimbingan', () => {
@@ -26,5 +26,4 @@ describe('Test Create New Bimbingan Akademik', () =>{
     cy.xpath('//*[@id="Sidebar"]/div/div[3]/div/div')
       .click();
   })
-
 })
